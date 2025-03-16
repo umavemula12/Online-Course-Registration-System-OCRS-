@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://wallpapercave.com/wp/wp2939993.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: url('') center/cover no-repeat;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav-area {
+            list-style: none;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .nav-area li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .nav-area li a {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #32cd32;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .nav-area li:hover a {
+            background-color: #39ff14;
+        }
+
+        .container {
+            width: 380px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #9867C5;
+            transform: translateY(-2px);
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: transparent;
+            color: #fff;
+            padding: 2px;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Online Courses Registration System</h1>
+        <nav>
+            <ul class="nav-area">
+                <li><a href="index1.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Login Form</h2>
+        <form id="loginForm" action="login1.jsp" method="post" onsubmit='return myFun()' >
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Login">
+            <p class="error-message" id="errorMessage"></p>
+
+            
+        </form>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; Vemula Uma 22761A05C6.</p>
+    </footer>
+
+    <script>
+        
+			function myFun()
+			{
+				var name=document.register.username.value;
+				var pwd=document.register.password.value;
+				
+
+				if(name==""||name=null)
+				{
+					alert("please fill the name");
+					document.login.name.focus();
+					return false;
+				}
+				if(pwd==""||pwd=null)
+				{
+					alert("please fill the name");
+					document.login.pwd.focus();
+					return false;
+				}
+			}
+		
+    </script>
+</body>
+
+</html>

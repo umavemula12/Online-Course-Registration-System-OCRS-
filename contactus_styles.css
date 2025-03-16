@@ -1,0 +1,74 @@
+/* Reset some default browser styles */
+body, h1, p, ol, em, div, form, input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Style the contact section */
+.contact {
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f8f8;
+}
+
+/* Style the contact information */
+.container .contactInfo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container .contactInfo .box {
+  text-align: center;
+}
+
+.container .contactInfo .box .icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Style the contact form */
+.contactForm {
+  margin-top: 20px;
+}
+
+.contactForm form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contactForm h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contactForm .inputBox {
+  margin-bottom: 20px;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contactForm input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+}

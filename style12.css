@@ -1,0 +1,82 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+}
+
+header {
+    background-color: LightGreen;
+    color: #333;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header img {
+    max-width: 15%;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+}
+
+header h1 {
+    color: blue;
+    font-family: 'Courier';
+    margin-top: 20px; /* Adjust as needed for alignment */
+}
+
+header h2 {
+    color: red;
+    font-family: 'Times New Roman';
+}
+
+header h3 {
+    margin: 5px 0; /* Provides spacing between subtitle elements */
+}
+
+nav {
+    clear: both; /* Clears the float effect */
+    background: #f2f2f2;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: darkgreen;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    position: relative;
+}
+
+
+
+nav a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.middle {
+    background-image: url('sudha.webp'); /* Ensure this is the correct path */
+    height: 500px; /* Fixed height, or adjust as necessary */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

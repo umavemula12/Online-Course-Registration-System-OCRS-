@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://media.istockphoto.com/id/1293193377/vector/online-education-application-learning-worldwide-on-phone-mobile-website-background-social.jpg?s=170667a&w=0&k=20&c=Wi2riPGuUCG_V5YnN-3h6sR2oc3ujtPB4Ph839kwt2o='); /* Replace 'background-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+}
+
+.register-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.register-button:hover {
+    background-color: #2980b9;
+}

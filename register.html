@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 100;
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-teachers--classroom-counseling-training-course-poster-image_188622.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        header {
+            background: url('') center/cover no-repeat;
+            padding: 2px;
+            text-align: center;
+        }
+
+        .nav-area {
+            list-style: none;
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .nav-area li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .nav-area li a {
+            padding: 8px 16px;
+            font-size: 18px;
+            background-color: #32cd32;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .nav-area li:hover a {
+            background-color: #39ff14;
+        }
+
+        .container {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 2px 0;
+            color: #555;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+
+        .success-message {
+            color: green;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #4f666a;
+            color: #fff;
+            padding: 1px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .fixed-message {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Online Courses Registration System</h1>
+            <nav>
+                <ul class="nav-area">
+                    <li><a href="index1.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm" action="register.jsp" method="post" onsubmit='return myFun()' name='register'>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <input type="submit" value="Register">
+            <p class="error-message" id="errorMessage"></p>
+            <h3>If you are already registered, click here to <a href="login.html">Login</a></h3>
+        </form>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; Vemula Uma 22761A05C6.</p>
+    </footer>
+
+    <script>
+        function myFun()
+			{
+				var name=document.register.username.value;
+				var email=document.register.email.value;
+				var pwd=document.register.password.value;
+				var cpwd=document.register.confirmPassword.value;
+
+
+				if(name==""||name=null)
+				{
+					alert("please fill the name");
+					document.login.name.focus();
+					return false;
+				}
+				if(pwd==""||pwd=null)
+				{
+					alert("please fill the name");
+					document.login.pwd.focus();
+					return false;
+				}
+				
+
+				if(email==""||email=null)
+				{
+					alert("please fill the name");
+					document.login.email.focus();
+					return false;
+				}
+				if(cpwd==""||cpwd=null)
+				{
+					alert("please fill the name");
+					document.login.cpwd.focus();
+					return false;
+				}
+
+				if (pwd !== cpwd) {
+        
+				    document.getElementById('errorMessage').innerText = 'Passwords do not match.';
+				    event.preventDefault(); // Prevents the form from submitting
+					
+				} 
+				console.log("Register Sucessful");
+				alert("data filled successfully...")
+				return true;
+			}
+    </script>
+</body>
+
+</html>

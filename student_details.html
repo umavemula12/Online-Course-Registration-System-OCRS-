@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<a href="index.html" color="green">Back to home</a>
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="stu_styles.css">
+</head>
+<body>
+    <form id="registrationForm" action="student.jsp" method="post" onsubmit='submitForm()'>
+        <table border="5" align="center">
+            <tr>
+                <th colspan="2" align='center'><h3>Student Registration Form</h3></th>
+            </tr>
+            <tr>
+                <td>Enter Your Name:</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Enter your email:</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="tel" name="pno"></td>
+            </tr>
+            <tr>
+                <td>Enter your DOB:</td>
+                <td><input type="date" name="dob"></td>
+            </tr>
+            <tr>
+                <td>Select your Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td>
+                    <label>Country:</label>
+                    <select name="addr">
+                        <option value="India">India</option>
+                        <!-- Add more country options as needed -->
+                    </select><br>
+
+                    <label>State:</label>
+                    <select name="addr">
+			<option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Delhi">Delhi</option>
+                        <!-- Add more state options as needed -->
+                    </select><br>
+
+                    <label>City:</label>
+                    <input type="text" name="addr"><br>
+
+                    <label>Pincode:</label>
+                    <input type="text" name="addr">
+                </td>
+            </tr>
+            <tr>
+                <td>Highest Qualification:</td>
+                <td>
+                    <select name="quali">
+                        <option value="High School">High School</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Bachelor's Degree">Bachelors Degree</option>
+                        <option value="Master's Degree">Masters Degree</option>
+                    </select>
+                </td>
+            </tr>
+	    <tr>
+                <td>College Name:</td>
+                <td><input type="text" name="college"></td>
+            </tr>
+            <tr>
+                <td>Department:</td>
+                <td><input type="text" name="department"></td>
+            </tr>
+	    <tr>
+                <td>College Enrollment ID:</td>
+                <td><input type="text" name="id"></td>
+            </tr>
+            <tr>
+                <td>Studying Year:</td>
+                <td>
+                    <select name="year">
+                        <option value="First Year">First Year</option>
+                        <option value="Second Year">Second Year</option>
+                        <option value="Third Year">Third Year</option>
+                        <option value="Fourth Year">Fourth Year</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Languages Known:</td>
+                <td>
+                    <input type="checkbox" name="lang" value="Telugu"> Telugu
+                    <input type="checkbox" name="lang" value="Hindi"> Hindi
+                    <input type="checkbox" name="lang" value="English"> English
+                    <input type="checkbox" name="lang" value="Urdu"> Urdu
+                </td>
+            </tr>
+           
+            
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit" onclick="submitForm()">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="stu_script.js"></script>
+</body>
+</html>
